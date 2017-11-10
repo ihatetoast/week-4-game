@@ -1,0 +1,50 @@
+header, footer {
+  background-color: #6648CF;
+  border: 2px solid none;
+  width: 100%;
+  height: 5em; }
+
+section {
+  background-color: #ccc;
+  border: 2px solid none;
+  width: 100%;
+  height: none; }
+
+.gems, .comparisonHolder {
+  display: flex;
+  flex-wrap: wrap; }
+
+.sapphire, .amethyst {
+  color: white; }
+
+.sapphire {
+  background-color: #1B126B;
+  border: 2px solid #50FFB1;
+  width: 5em;
+  height: 5em; }
+
+.amethyst {
+  background-color: #6648CF;
+  border: 2px solid #B10F2E;
+  width: 5em;
+  height: 5em; }
+
+.goalNumber {
+  background-color: #fff;
+  border: 2px solid #B10F2E;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10em; }
+
+.mouthful {
+  background-color: #fff;
+  border: 2px solid #6648CF;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10em; }
+
+/*# sourceMappingURL=style.css.map */

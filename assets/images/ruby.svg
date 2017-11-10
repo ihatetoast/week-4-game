@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="121px" height="162px" viewBox="0 0 121 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>ruby</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="40 2 80.0507812 2 120 41.9589844 120 122.226562 80.2226562 162 40.1542969 162 0 122.226562 0 41.9589844"></polygon>
+        <filter x="-3.8%" y="-2.8%" width="107.5%" height="105.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="1.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.216012968   0 0 0 0 0.0152906907   0 0 0 0 0.0152906907  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="22" y="24" width="77" height="115.5"></rect>
+        <filter x="-14.3%" y="-9.5%" width="128.6%" height="119.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="13" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="4" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.505882353   0 0 0 0 0.00784313725   0 0 0 0 0.149019608  0 0 0 0.546620245 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="40" y="42" width="40" height="80"></rect>
+        <filter x="-22.5%" y="-11.2%" width="145.0%" height="122.5%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="6" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.702806122   0 0 0 0 0.22712806   0 0 0 0 0.22712806  0 0 0 0.270323822 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ruby" transform="translate(-40.000000, -19.000000)">
+            <g transform="translate(40.000000, 18.000000)">
+                <g id="Rectangle">
+                    <use fill="#66001D" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Rectangle-2-Copy">
+                    <use fill-opacity="0.30225317" fill="#3E1E27" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+                <g id="Rectangle-2">
+                    <use fill-opacity="0" fill="#672638" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                </g>
+                <polygon id="Triangle" fill-opacity="0.635586504" fill="#6C1224" points="80 0.9384792 120.648383 42 80 42"></polygon>
+                <polygon id="Triangle-Copy-2" fill-opacity="0.635586504" fill="#701527" transform="translate(20.324192, 142.119141) scale(-1, -1) translate(-20.324192, -142.119141) " points="0 122 40.6483831 162.238281 0 162.238281"></polygon>
+                <polygon id="Triangle-Copy-3" fill-opacity="0.635586504" fill="#510E1B" transform="translate(100.324192, 141.119141) scale(1, -1) translate(-100.324192, -141.119141) " points="80 121 120.648383 161.238281 80 161.238281"></polygon>
+                <polygon id="Triangle-Copy" fill-opacity="0.635586504" fill="#832134" transform="translate(20.324192, 22.530760) scale(-1, 1) translate(-20.324192, -22.530760) " points="0 2 40.6483831 43.0615208 0 43.0615208"></polygon>
+                <polygon id="Star" fill-opacity="0.642917799" fill="#F7E4E9" points="40 49.0860959 36.5558491 55.2007351 37.8264977 48.0357527 31.6850842 49.518176 36.9262035 45.5 31.6850842 41.481824 37.8264977 42.9642473 36.5558491 35.7992649 40 41.9139041 43.4441509 35.7992649 42.1735023 42.9642473 48.3149158 41.481824 43.0737965 45.5 48.3149158 49.518176 42.1735023 48.0357527 43.4441509 55.2007351"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,48 @@
+//VARIABLES
+$ruby: #B10F2E;
+$emerald: #50FFB1;
+$sapphire: #1B126B;
+$amethyst: #6648CF;
+//MIXINS
+//temporary styles
+@mixin testBox($fill, $border, $w, $h){
+	background-color: $fill;
+	border: 2px solid $border;
+	width: $w;
+	height: $h;
+}
+
+header, footer {
+	@include testBox($amethyst, none, 100%, 5em);
+}
+section {
+	@include testBox(#ccc, none, 100%, none);
+}
+.gems, .comparisonHolder {
+	display:flex;
+	flex-wrap: wrap;
+
+}
+.sapphire, .amethyst {
+		color: white;
+}
+
+
+.sapphire{
+	@include testBox($sapphire, $emerald, 5em, 5em);
+}
+.amethyst{
+	@include testBox($amethyst, $ruby, 5em, 5em);
+}
+.goalNumber{
+	@include testBox(#fff, $ruby, 10em, 10em);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 10em;
+}
+.mouthful{
+	@include testBox(#fff, $amethyst, 10em, 10em);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 10em;
+}

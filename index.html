@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Thanksgiving | Katy</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="./assets/css/reset.css">
+		<link rel="stylesheet" href="./assets/css/style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Thanksgiving Belly Buster</h1>
+		</header>
+		<section>
+			<div class="instructions">
+				<p>Happy Thanksgiving! You are in charge of serving up dinner to friends and family.</p>
+				<p>Each food serving has a different number of mouthfuls that is unknown until you start serving, and each person has a different belly limit. </p>
+				<p>Your goal is to make the number of servings equal to their belly limit. If you serve too much, they have no room for pie. If you balance belly limit, they get a slice of pie. </p>
+			</div>
+			<div class="comparisonHolder">
+				<div class="bellyLimit">
+					<h1>Belly Limit:</h1>
+					<div class="goalNumber">
+						<p id="goalNumber">?</>
+					</div>
+				</div>
+				<div class="mouthfuls">
+					<h1>Mouthfuls:</h1>
+					<div class="mouthful">
+						<p id="mouthful">?</>
+					</div>
+				</div>
+			</div>
+			<div id="foods">
+			</div>
+			<div class="score">
+				<h1>Results</h1>
+				<div class="message" id="message">
+					<p>You've busted <span id="losses">no</span> bellies and served <span id="wins">no</span> slices of pie.</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>Katy Cassidy | ihatetoast</p>
+		</footer>
+		<script src="./assets/javascript/game.js"></script>
+	</body>
+</html>
