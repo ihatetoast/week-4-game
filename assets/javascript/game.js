@@ -50,7 +50,7 @@ function Food(nameArr, course){
 	this.name = nameArr[this.index];
 	this.mouthfuls = Math.floor(Math.random()*12) + 1;
 	this.serve = function(){
-		$("#menu").text(`We have ${this.name} for ${this.course} (${this.mouthfuls}) mouthfuls.`);
+		console.log(`food ${this.name} for ${this.course} (${this.mouthfuls}) mouthfuls.`);
 	};
 	this.load = function(){
 		$("#foods").append(`<button class="spoons" id=${this.course} data-key=${this.mouthfuls}>${this.name}</button>`);
@@ -89,6 +89,8 @@ function playGame(){
 					wins ++;
 					$('#wins').text(wins);
 					setTimeout(()=>{
+						const audio = document.querySelector(`audio[data-name="pie"]`);
+    				audio.play();
 						$("#mouthful").text("Mmm. Piiie.");
 						setTimeout(()=>{
 							playGame();
@@ -98,7 +100,9 @@ function playGame(){
 					losses ++;
 					$('#losses').text(losses);
 					setTimeout(()=>{
-						$("#goalNumber").text("Go home. No pie!");
+						const audio = document.querySelector(`audio[data-name="oof"]`);
+    				audio.play();
+						$("#result").text("Go home. No pie!");
 						setTimeout(()=>{
 							playGame();
 						}, 2500);

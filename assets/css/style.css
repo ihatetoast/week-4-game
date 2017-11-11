@@ -3,26 +3,38 @@ body {
   display: flex;
   flex-direction: column; }
 
+.site {
+  min-height: 100vh; }
+
 header, footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #3c1518;
-  border: 2px solid none;
-  width: 100%;
-  height: 5em; }
+  background-color: #a44200; }
+
+header {
+  padding: 0.5em; }
 
 h1, h2, h3 {
   font-family: "Suranna", "Times New Roman", serif; }
 
 p {
   font-family: "Libre Franklin", "Arial", sans-serif;
-  line-height: 1.5em; }
+  line-height: 1em;
+  font-size: 1em; }
+  @media screen and (min-height: 600px) {
+    p {
+      line-height: 1.2em;
+      font-size: 1em; } }
+  @media (min-width: 1020px) {
+    p {
+      line-height: 1.5em;
+      font-size: 1.5em; } }
 
 header h1 {
   font-size: 2em;
-  color: #d58936;
+  color: #3c1518;
   letter-spacing: 1px; }
 
 section {
@@ -30,32 +42,72 @@ section {
   flex-direction: column;
   justify-content: center;
   padding: 0.2em 2em; }
+  @media (min-width: 1020px) {
+    section {
+      flex-direction: row;
+      justify-content: space-around; } }
+
+.site-content {
+  flex: 1; }
 
 .instructions p {
   margin-top: 0.5em; }
+@media (min-width: 1020px) {
+  .instructions {
+    flex-basis: 30%; } }
 
 .gameBoard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: stretch; }
+  @media (min-width: 1020px) {
+    .gameBoard {
+      flex-basis: 60%; } }
 
 .comparisonHolder {
   display: flex;
   justify-content: center; }
 
+#mouthful, #result {
+  height: 1em;
+  color: #d58936;
+  font-size: 2em; }
+
 .stomach {
-  background-color: #69140e; }
+  display: flex; }
   .stomach img {
     width: 100%;
     margin-bottom: -3px; }
 
+.bile {
+  flex: 1;
+  background-color: #8b9474;
+  opacity: 0.5; }
+
 .frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex-basis: 50%;
   margin: 0.5em;
-  border: 1px solid #3c1518;
+  border: 2px solid #a44200;
+  border-radius: 5%;
   padding: 0.5em;
-  background-color: #8b9474; }
+  background-color: #3c1518; }
+  .frame h1 {
+    color: #d58936;
+    font-size: 1em; }
+
+.mouthfuls h1 {
+  margin-bottom: 1em; }
+
+.mouthful {
+  background-image: url(../images/plate.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4em; }
 
 .goalNumber {
   background-color: #fff;
@@ -70,6 +122,9 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
+  @media (min-width: 630px) {
+    .foodButtons {
+      flex-wrap: nowrap; } }
 
 .spoons {
   width: 46%;
@@ -84,5 +139,14 @@ section {
   font-size: 1em;
   line-height: 1.5em;
   justify-content: flex-end; }
+  @media (min-width: 630px) {
+    .spoons {
+      width: 33%;
+      padding: 1.5em 0.2em; } }
+
+.score {
+  margin-top: 1em; }
+  .score h1 {
+    font-size: 1.5em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,31 +8,34 @@
 		<link rel="stylesheet" href="./assets/css/reset.css">
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
-	<body>
+	<body class="site">
 		<header>
 			<h1>Thanksgiving Belly Buster</h1>
 		</header>
-		<section>
+		<section class="site-content">
 			<div class="instructions">
-				<p>Happy Thanksgiving! You are in charge of serving up dinner to friends and family.</p>
-				<p>Each food serving has a different number of mouthfuls that is unknown until you start serving, and each person has a different belly limit. </p>
-				<p>Your goal is to make the number of servings equal to their belly limit. If you serve too much, they have no room for pie. If you balance belly limit, they get a slice of pie. </p>
+				<p>Happy Thanksgiving! You are serving up dinner to friends and family.</p>
+				<p>Problem: Each person's belly has a different limit, but the serving sizes vary. </p>
+				<p>Goal: Make the number of servings equal to the belly limit. If you serve too much, they have no room for pie. If you balance belly limit, they get a slice. </p>
 			</div>
 			<div class="gameBoard">
-				<div>
-					<h1 id="menu"></h1>
-				</div>
 				<div class="comparisonHolder">
 					<div class="frame bellyLimit">
 						<h1>Belly Limit: <span id="goalNumber">?</span></h1>
-						<div class="stomach">
-							<img src="./assets/images/stomach.svg" alt="">
+						<div id="result">
+							
 						</div>
+						
+						<div class="stomach">
+							<img src="./assets/images/stomach.svg" alt="a stomach">
+						</div>
+						<div class="filler"></div>
 					</div>
 					<div class="frame mouthfuls">
 						<h1>Mouthfuls:</h1>
+						<div id="mouthful"></div>
 						<div class="mouthful">
-							<p id="mouthful">?</p>
+
 						</div>
 					</div>
 				</div>
@@ -52,6 +55,9 @@
 		<footer>
 			<p>Katy Cassidy | ihatetoast</p>
 		</footer>
+
+		<audio data-name="oof" src="./assets/audio/oof.wav"></audio>
+		<audio data-name="pie" src="./assets/audio/pie.wav"></audio>
 		<script src="./assets/javascript/game.js"></script>
 	</body>
 </html>
