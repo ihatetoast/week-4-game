@@ -1,8 +1,14 @@
+
+
 //VARIABLES
-$ruby: #B10F2E;
-$emerald: #50FFB1;
-$sapphire: #1B126B;
-$amethyst: #6648CF;
+$text: 'Libre Franklin';
+$headings: 'Suranna';
+/* RGB */
+$brown: rgba(60, 21, 24, 1);
+$red: rgba(105, 20, 14, 1);
+$orange: rgba(164, 66, 0, 1);
+$yellow: rgba(213, 137, 54, 1);
+$slate: rgba(139, 148, 116, 1);
 //MIXINS
 //temporary styles
 @mixin testBox($fill, $border, $w, $h){
@@ -11,38 +17,94 @@ $amethyst: #6648CF;
 	width: $w;
 	height: $h;
 }
-
-header, footer {
-	@include testBox($amethyst, none, 100%, 5em);
-}
-section {
-	@include testBox(#ccc, none, 100%, none);
-}
-.gems, .comparisonHolder {
+body {
 	display:flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+}
+header, footer {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include testBox($brown, none, 100%, 5em);
+}
 
+h1, h2, h3 {
+	font-family: $headings, 'Times New Roman', serif;
 }
-.sapphire, .amethyst {
-		color: white;
+p {
+	font-family: $text, 'Arial', sans-serif;
+	line-height: 1.5em;
+}
+header h1 {
+	font-size: 2em;
+	color: $yellow;
+	letter-spacing: 1px;
 }
 
-
-.sapphire{
-	@include testBox($sapphire, $emerald, 5em, 5em);
+//🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌
+//🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌
+//the guts
+//🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌
+//🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌🍌
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	    padding: 0.2em 2em;
 }
-.amethyst{
-	@include testBox($amethyst, $ruby, 5em, 5em);
+.instructions p {
+	margin-top: 0.5em;
 }
-.goalNumber{
-	@include testBox(#fff, $ruby, 10em, 10em);
-	border-radius: 50%;
-	text-align: center;
-	line-height: 10em;
+.gameBoard{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+.comparisonHolder{
+	display: flex;
+	justify-content: center;
+}
+.stomach{
+	background-color: $red;
+	img {
+		width: 100%;
+		margin-bottom: -3px;
+	}
+}
+.frame {
+	flex-basis: 50%;
+	margin: 0.5em;
+	border: 1px solid $brown;
+	padding: 0.5em;
+	background-color: $slate;
 }
 .mouthful{
-	@include testBox(#fff, $amethyst, 10em, 10em);
+
+}
+.goalNumber{
+	@include testBox(#fff, $yellow, 10em, 10em);
 	border-radius: 50%;
 	text-align: center;
 	line-height: 10em;
+}
+.foodButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-around;
+}
+.spoons {
+	width: 46%;
+	margin: 0.1em;
+	padding: 1em 0.2em;
+	background-color: #a44200;
+	background-image: url(../images/spoon.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	font-size: 1em;
+	line-height: 1.5em;
+	justify-content: flex-end;
 }

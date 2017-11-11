@@ -53,7 +53,7 @@ function Food(nameArr, course){
 		$("#menu").text(`We have ${this.name} for ${this.course} (${this.mouthfuls}) mouthfuls.`);
 	};
 	this.load = function(){
-		$("#foods").append(`<button class=${this.course} id=${this.course} data-key=${this.mouthfuls}>${this.name}</button>`);
+		$("#foods").append(`<button class="spoons" id=${this.course} data-key=${this.mouthfuls}>${this.name}</button>`);
 	}
 }//END MAKE THE FOOD FOOD CONSTRUCTOR
 
