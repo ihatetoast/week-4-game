@@ -40,7 +40,6 @@ header h1 {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 0.2em 2em; }
   @media (min-width: 1020px) {
     section {
@@ -55,6 +54,12 @@ section {
 @media (min-width: 1020px) {
   .instructions {
     flex-basis: 30%; } }
+
+.extra {
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .extra {
+      display: block; } }
 
 .gameBoard {
   display: flex;

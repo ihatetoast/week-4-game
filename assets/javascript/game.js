@@ -99,14 +99,15 @@ function playGame(){
 				} else {
 					losses ++;
 					$('#losses').text(losses);
+					const audio = document.querySelector(`audio[data-name="oof"]`);
+    			audio.play();
+    			$("#result").text("Go home. No pie!");
 					setTimeout(()=>{
-						const audio = document.querySelector(`audio[data-name="oof"]`);
-    				audio.play();
-						$("#result").text("Go home. No pie!");
+						$("#result").text("");
 						setTimeout(()=>{
 							playGame();
 						}, 2500);
-					}, 500);
+					}, 1000);
 				}
 			}
 		}
