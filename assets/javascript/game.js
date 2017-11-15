@@ -14,7 +14,6 @@ $(document).ready(function(){
 	// ****************************
 	// ****************************
 	function gameSetup(){
-		
  	//arrays of ...
  		const foodOptions = {
 			appsArr: ["cheeseball", "cranberry sauce", "salad"],
@@ -27,16 +26,11 @@ $(document).ready(function(){
 		let protein = new Food(foodOptions.protArr, "protein");
 		let starch = new Food(foodOptions.starchArr, "starch");
 		let veggies = new Food(foodOptions.vegArr, "veg");
-		appetizer.serve();
 		appetizer.load();	
-		protein.serve();
 		protein.load();
-		starch.serve();
 		starch.load();
-		veggies.serve();
 		veggies.load();
   } //END GAMESETUP FCN
-
 
 	// ****************************
 	// ****************************
@@ -49,43 +43,36 @@ function Food(nameArr, course){
 	this.course = course;
 	this.name = nameArr[this.index];
 	this.mouthfuls = Math.floor(Math.random()*12) + 1;
-	this.serve = function(){
-		console.log(`food ${this.name} for ${this.course} (${this.mouthfuls}) mouthfuls.`);
-	};
 	this.load = function(){
 		$("#foods").append(`<button class="spoons" id=${this.course} data-key=${this.mouthfuls}>${this.name}</button>`);
 	}
-}//END MAKE THE FOOD FOOD CONSTRUCTOR
-
+}//<-- ends food maker
 
 // ****************************
 // ****************************
 // play the game
 // ****************************
 // ****************************
-//DRY this shit up
 function playGame(){
 	let userArr = [];
- 	let foodTotal = 0;
+	let userVal = 0;
  	$("#foods").empty();
  	$("#mouthful").empty();
  	
  	let rando = randoNummo(120, 19);
- //LOAD TO THE STOMACH
- $("#goalNumber").text(rando);
+	$("#goalNumber").text(rando);
 
 	gameSetup();
-	
- 	$("#mouthful").text(foodTotal);
+
+ 	$("#mouthful").text(userVal);
  	$("#goalNumber").text(rando);
  	//get sum of the array
  		function checkWin(){
-			foodTotal = userArr.reduce((sum, value) => sum + value, 0);
-			$("#mouthful").text(foodTotal);
-			if(foodTotal < rando){
+			$("#mouthful").text(userVal);
+			if(userVal < rando){
 				return;
 			} else {
-				if(foodTotal=== rando){
+				if(userVal === rando){
 					wins ++;
 					$('#wins').text(wins);
 					setTimeout(()=>{
@@ -110,41 +97,20 @@ function playGame(){
 					}, 1000);
 				}
 			}
-		}
-	$("#appetizer").on("click", function(e){
-		const str = $(this).text();
-		const val = $(this).data("key");
- 		console.log(`text inside button is ${str}`);
- 		console.log(`value is ${val}`);
- 		userArr.push(val);
- 		checkWin();
- 	});
- 	$("#protein").on("click", function(e){
-		const str = $(this).text();
-		const val = $(this).data("key");
- 		console.log(`text inside button is ${str}`);
- 		console.log(`value is ${val}`);
- 		userArr.push(val);
- 		checkWin();
- 	});
- 	$("#starch").on("click", function(e){
-		const str = $(this).text();
-		const val = $(this).data("key");
- 		console.log(`text inside button is ${str}`);
- 		console.log(`value is ${val}`);
- 		userArr.push(val);
- 		checkWin();
- 	});
- 	$("#veg").on("click", function(e){
-		const str = $(this).text();
-		const val = $(this).data("key");
- 		console.log(`text inside button is ${str}`);
- 		console.log(`value is ${val}`);
- 		userArr.push(val);
- 		checkWin();
- 	});
+		}//<-- ends check win
 
-}
+		// ****************************
+		// ****************************
+		// CLICK ALL THE THINGS!
+		// ****************************
+		// ****************************
+		$("button").on("click", function(e){
+			const str = $(this).text();
+			const val = $(this).data("key");
+			userVal += val;
+			checkWin();
+		})
+}//<--ends function playgame
 
 playGame();
 
@@ -161,14 +127,16 @@ playGame();
 
  // 			settimeout to reset.
 
- 
+	// this.serve = function(){
+	// 	console.log(`food ${this.name} for ${this.course} (${this.mouthfuls}) mouthfuls.`);//for checking and bedugging.
+	// };
 
 
 
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!
-// end of doco ready, do not lose this 
+// end of doco ready, do not lose this set of end braces
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!
 
