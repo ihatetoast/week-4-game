@@ -17,10 +17,10 @@ $(document).ready(function(){
 		
  	//arrays of ...
  		const foodOptions = {
-			appsArr: ["cheeseball", "cranberry sauce", "cauliflower salad"],
-			protArr: ["turkey", "honey-glazed ham", "tofurkey", "turducken"],
-			starchArr: ["mashed potatoes", "stuffing", "taters au gratin", "rolls"],
-			vegArr: ["green beans", "corn on the cob", "peas", "sweet potatoes"]
+			appsArr: ["cheeseball", "cranberry sauce", "salad"],
+			protArr: ["turkey", "ham", "tofurkey", "turducken"],
+			starchArr: ["cornbread", "stuffing", "potatoes", "rolls"],
+			vegArr: ["carrots", "corn", "peas", "yams"]
  		}
 	 	//FOR FOOD OPTIONS
 		let appetizer = new Food(foodOptions.appsArr, "appetizer");
