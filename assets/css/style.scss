@@ -17,6 +17,11 @@ $slate: rgb(139, 148, 116);
 	width: $w;
 	height: $h;
 }
+@keyframes spinning {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
 body {
 	display:flex;
 	flex-direction: column;
@@ -101,7 +106,7 @@ section {
 	display: flex;
 	justify-content: center;
 }
-#mouthful, #result {
+#mouthful, #goalNumber {
 	height: 1em;
 	color: $yellow;
 	font-size: 2em;
@@ -119,6 +124,11 @@ section {
 	opacity: 0.5;
 
 }
+
+.spin {
+  animation: spinning 1s 3;
+}
+
 .frame {
 	display: flex;
 	flex-direction: column;
@@ -135,22 +145,20 @@ section {
 		font-size: 1em;
 	}
 }
-.mouthfuls h1 {
-	margin-bottom: 1em;
-}
-.mouthful{
-	background-image: url(../images/plate.svg);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	padding: 4em;
-}
-.goalNumber{
-	@include testBox(#fff, $yellow, 10em, 10em);
-	border-radius: 50%;
-	text-align: center;
-	line-height: 10em;
-}
+
+// .mouthful{
+// 	background-image: url(../images/plate.svg);
+// 	background-size: 100%;
+// 	background-repeat: no-repeat;
+// 	background-position: center;
+// 	padding: 4em;
+// }
+// .goalNumber{
+// 	@include testBox(#fff, $yellow, 10em, 10em);
+// 	border-radius: 50%;
+// 	text-align: center;
+// 	line-height: 10em;
+// }
 .foodButtons {
 	display: flex;
 	flex-wrap: wrap;

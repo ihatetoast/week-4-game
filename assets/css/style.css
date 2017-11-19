@@ -1,4 +1,7 @@
 /* RGB */
+@keyframes spinning {
+  100% {
+    transform: rotate(360deg); } }
 body {
   display: flex;
   flex-direction: column; }
@@ -73,7 +76,7 @@ section {
   display: flex;
   justify-content: center; }
 
-#mouthful, #result {
+#mouthful, #goalNumber {
   height: 1em;
   color: #d58936;
   font-size: 2em; }
@@ -89,6 +92,9 @@ section {
   background-color: #8b9474;
   opacity: 0.5; }
 
+.spin {
+  animation: spinning 1s 3; }
+
 .frame {
   display: flex;
   flex-direction: column;
@@ -103,25 +109,6 @@ section {
   .frame h1 {
     color: #d58936;
     font-size: 1em; }
-
-.mouthfuls h1 {
-  margin-bottom: 1em; }
-
-.mouthful {
-  background-image: url(../images/plate.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 4em; }
-
-.goalNumber {
-  background-color: #fff;
-  border: 2px solid #d58936;
-  width: 10em;
-  height: 10em;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10em; }
 
 .foodButtons {
   display: flex;

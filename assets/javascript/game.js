@@ -1,5 +1,5 @@
 $(document).ready(function(){
- console.clear();
+
  //GET A RANDOM NUMBER FOR PLAYER TO REACH
  function randoNummo(min, max){
  		return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -16,10 +16,10 @@ $(document).ready(function(){
 	function gameSetup(){
  	//arrays of ...
  		const foodOptions = {
-			appsArr: ["cheeseball", "cranberry sauce", "salad"],
-			protArr: ["turkey", "ham", "tofurkey", "turducken"],
-			starchArr: ["cornbread", "stuffing", "potatoes", "rolls"],
-			vegArr: ["carrots", "corn", "peas", "yams"]
+			appsArr: ["cheeseball", "cranberry sauce", "salad", "fondue"],
+			protArr: ["turkey", "ham", "tofurkey", "turducken", "roast"],
+			starchArr: ["cornbread", "stuffing", "bread", "rolls", "rice"],
+			vegArr: ["potatoes", "corn", "peas", "yams"]
  		}
 	 	//FOR FOOD OPTIONS
 		let appetizer = new Food(foodOptions.appsArr, "appetizer");
@@ -39,9 +39,10 @@ $(document).ready(function(){
 	// ****************************
 function Food(nameArr, course){
 	// this.nameArr = nameArr;
-	this.index = randoNummo(0, nameArr.length-1)
+	this.index = randoNummo(0, nameArr.length-1);
 	this.course = course;
 	this.name = nameArr[this.index];
+	
 	this.mouthfuls = Math.floor(Math.random()*12) + 1;
 	this.load = function(){
 		$("#foods").append(`<button class="spoons" id=${this.course} data-key=${this.mouthfuls}>${this.name}</button>`);
@@ -79,6 +80,7 @@ function playGame(){
 						const audio = document.querySelector(`audio[data-name="pie"]`);
     				audio.play();
 						$("#mouthful").text("Mmm. Piiie.");
+						$("#plateImg").addClass("spin");
 						setTimeout(()=>{
 							playGame();
 						}, 2500);
@@ -87,8 +89,9 @@ function playGame(){
 					losses ++;
 					$('#losses').text(losses);
 					const audio = document.querySelector(`audio[data-name="oof"]`);
+					$('#bellyImg').effect( "shake", {times: 8, distance: 10}, 1000 );
     			audio.play();
-    			$("#result").text("Go home. No pie!");
+    			$("#goalNumber").text("Go home. No pie!");
 					setTimeout(()=>{
 						$("#result").text("");
 						setTimeout(()=>{
