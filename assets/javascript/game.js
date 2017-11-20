@@ -1,9 +1,11 @@
 $(document).ready(function(){
 
  //GET A RANDOM NUMBER FOR PLAYER TO REACH
+
  function randoNummo(min, max){
  		return Math.floor(Math.random() * (max - min + 1)) + min;
- 	}
+ }
+
 
  	let losses = 0;
  	let wins = 0;
@@ -55,12 +57,13 @@ function Food(nameArr, course){
 // ****************************
 // ****************************
 function playGame(){
+
 	let userArr = [];
 	let userVal = 0;
  	$("#foods").empty();
  	$("#mouthful").empty();
  	
- 	let rando = randoNummo(120, 19);
+ 	let rando = randoNummo(19, 120);
 	$("#goalNumber").text(rando);
 
 	gameSetup();
@@ -71,11 +74,16 @@ function playGame(){
  		function checkWin(){
 			$("#mouthful").text(userVal);
 			if(userVal < rando){
+				//keep playing
 				return;
 			} else {
+				//game is over
+
 				if(userVal === rando){
+					$("button").unbind( "click" );
 					wins ++;
 					$('#wins').text(wins);
+
 					setTimeout(()=>{
 						const audio = document.querySelector(`audio[data-name="pie"]`);
     				audio.play();
@@ -84,8 +92,9 @@ function playGame(){
 						setTimeout(()=>{
 							playGame();
 						}, 2500);
-					}, 500);
+					}, 1000);
 				} else {
+					$("button").unbind( "click" );
 					losses ++;
 					$('#losses').text(losses);
 					const audio = document.querySelector(`audio[data-name="oof"]`);
@@ -112,10 +121,12 @@ function playGame(){
 			const val = $(this).data("key");
 			userVal += val;
 			checkWin();
+
 		})
-}//<--ends function playgame
+}   //<--ends function playgame
 
 playGame();
+
 
  // 	set up
 	// 4 foots to appear as buttons
